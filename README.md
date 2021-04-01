@@ -13,7 +13,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -26,11 +25,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Demo image]()
+Input Image             |Output depth map
+:----------------------:|:-----------------------:
+<img src="https://raw.githubusercontent.com/Gvanderl/Soft3DReconstruction/master/inputs/teddy1.png" width="500" />|<img src="https://raw.githubusercontent.com/Gvanderl/Soft3DReconstruction/master/outputs/teddy_Depth_map.png" width="350"/>
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`gvanderl`, `Soft3DReonstruction`, ``, ``, `Soft3DReconstruction`, `Partial implementation of the soft 3D reconstruction paper`
 
 
 <!-- GETTING STARTED -->
@@ -41,37 +39,35 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+* For virtual envs: [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/install.html)
   ```sh
-  npm install npm@latest -g
+  pip install --user pipenv
   ```
+Or use your virtual environment manager of choice, requirements are in the [Pipfile](Pipfile)
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/gvanderl/Soft3DReonstruction.git
+   git clone https://github.com/Gvanderl/StyleSegments.git
    ```
-2. Install NPM packages
+2. Install packages
    ```sh
-   npm install
+   pipenv install
    ```
-
+3. Run the script
+    ```sh
+    pipenv shell
+    pipenv main.py
+    ```
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Edit the config, either set Pahtlib image paths for `image_1_path` and `image_2_path` to to run certain images, or set those variables to `None` to run on all image pairs in `/inputs/`. 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/gvanderl/Soft3DReonstruction/issues) for a list of proposed features (and known issues).
+The outputs and intermediary steps will be displayed and saved to `/outputs/`
 
 
 
@@ -87,7 +83,6 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 
-
 <!-- LICENSE -->
 ## License
 
@@ -98,34 +93,14 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@](https://twitter.com/) - 
 
 Project Link: [https://github.com/gvanderl/Soft3DReonstruction](https://github.com/gvanderl/Soft3DReonstruction)
-
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* []()
-* []()
-* []()
+* [Soft 3D Reconstruction for View Synthesis](https://ericpenner.github.io/soft3d/Soft_3D_Reconstruction.pdf)
+* [Real-time local stereo matching using guided image filtering](https://publik.tuwien.ac.at/files/PubDat_206200.pdf)
+* [Guided Image Filtering](http://kaiminghe.com/publications/eccv10guidedfilter.pdf)
 
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/gvanderl/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/gvanderl/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/gvanderl/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/gvanderl/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/gvanderl/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/gvanderl/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/gvanderl/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/gvanderl/repo/issues
-[license-shield]: https://img.shields.io/github/license/gvanderl/repo.svg?style=for-the-badge
-[license-url]: https://github.com/gvanderl/repo/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/gvanderl
